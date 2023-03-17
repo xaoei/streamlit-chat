@@ -2,11 +2,6 @@ import streamlit.components.v1 as components
 import os
 from typing import Optional, Union
 
-try:
-    from typing import Literal
-except ImportError:
-    from typing_extensions import Literal
-
 
 _RELEASE = True
 COMPONENT_NAME = "streamlit_chat"
@@ -25,20 +20,9 @@ else:
         url = "http://localhost:3001"
     )
 
-# data type for avatar style
-AvatarStyle = Literal[
-    "zjl",
-    "default",
-    "Aqua",
-    "Darkness",
-    "Megumin",
-    "Frida",
-    "Luna",
-]
-
 def message(message: str, 
             is_user: Optional[bool] = False, 
-            avatar_style: Optional[AvatarStyle] = None,
+            avatar_style: Optional[str] = None,
             seed: Optional[Union[int, str]] = 88,
             key: Optional[str] = None):
     """
