@@ -27,31 +27,13 @@ else:
 
 # data type for avatar style
 AvatarStyle = Literal[
-    "adventurer",
-    "adventurer-neutral",
-    "avataaars",
-    "avataaars-neutral",
-    "big-ears",
-    "big-ears-neutral",
-    "big-smile",
-    "bottts",
-    "bottts-neutral",
-    "croodles",
-    "croodles-neutral",
-    "fun-emoji",
-    "icons",
-    "identicon",
-    "initials",
-    "lorelei",
-    "lorelei-neutral",
-    "micah",
-    "miniavs",
-    "open-peeps",
-    "personas",
-    "pixel-art",
-    "pixel-art-neutral",
-    "shapes",
-    "thumbs",
+    "zjl",
+    "default",
+    "Aqua",
+    "Darkness",
+    "Megumin",
+    "Frida",
+    "Luna",
 ]
 
 def message(message: str, 
@@ -83,7 +65,7 @@ def message(message: str,
     Returns: None
     """
     if not avatar_style:
-        avatar_style = "fun-emoji" if is_user else "bottts"
+        avatar_style = "zjl" if is_user else "default"
 
     _streamlit_chat(message=message, seed=seed, isUser=is_user, avatarStyle=avatar_style, key=key)
 
