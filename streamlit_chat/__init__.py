@@ -49,7 +49,7 @@ def message(message: str,
     Returns: None
     """
     if not avatar_style:
-        avatar_style = "zjl" if is_user else "default"
+        avatar_style = "https://file.u.xaoei.top/pub/avatar/zjl.png" if is_user else "https://file.u.xaoei.top/pub/avatar/default.png"
 
     _streamlit_chat(message=message, seed=seed, isUser=is_user, avatarStyle=avatar_style, key=key)
 
